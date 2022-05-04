@@ -1,8 +1,9 @@
-name: GitHub Actions Demo
-on: [push]
+name: Linter
+on: push
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: make install
-      - run: make lint
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+     - run: npm install
+     - run: make lint
