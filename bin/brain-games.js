@@ -4,5 +4,8 @@
 
 import { hello } from '../src/cli.js';
 
-hello();
+const user = hello();
+
+console.log(`test ${user}`);
+
 
