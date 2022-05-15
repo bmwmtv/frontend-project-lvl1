@@ -7,5 +7,3 @@ import { hello } from '../src/cli.js';
 const user = hello();
 
 console.log(`test ${user}`);
-
-
