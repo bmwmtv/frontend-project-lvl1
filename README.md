@@ -6,3 +6,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 [![asciicast](https://asciinema.org/a/494397.svg)](https://asciinema.org/a/494397)
+
+[![asciicast](https://asciinema.org/a/F7EvkN6cjXUEW95xYQ4STaT51.svg)](https://asciinema.org/a/F7EvkN6cjXUEW95xYQ4STaT51)
+
