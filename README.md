@@ -1,9 +1,17 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/bmwmtv/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/bmwmtv/frontend-project-lvl1/actions)
-
 [![Linter](https://github.com/bmwmtv/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/bmwmtv/frontend-project-lvl1/actions/workflows/linter.yml)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+
+This is a project of several thinking games.
+
+
+How to install
+
+1. Clone this repository
+2. Run the command: make install
+3. Run the command: npm link 
+
 
 Demo Even game
 [![asciicast](https://asciinema.org/a/494397.svg)](https://asciinema.org/a/494397)
