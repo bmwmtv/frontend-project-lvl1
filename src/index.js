@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 
 const getAnAnswer = () => {
@@ -6,11 +5,18 @@ const getAnAnswer = () => {
   return userAnswer;
 };
 
-const runGame = (game, userName, rules) => {
+const numberOfRounds = 3;
+const runGame = (getData, rules) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log(rules);
-  for (let c = 0; c < 3; c += 1) { // запускаем цикл из трёх попыток
-    const correctAnswer = game(); // считаем ответ
-    const userResponse = getAnAnswer(); // получаем ответ пользователя
+  for (let round = 0; round < numberOfRounds; round += 1) {
+    const game = getData();
+    const correctAnswer = game[0];
+    const finalTask = game[1];
+    console.log(`Question: ${finalTask}`);
+    const userResponse = getAnAnswer();
     if (correctAnswer !== userResponse) {
       console.log(`'${userResponse}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);

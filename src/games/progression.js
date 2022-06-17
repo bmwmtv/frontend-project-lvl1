@@ -1,18 +1,12 @@
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
-
-import hello from '../cli.js';
 import randomInt from '../randIntCalc.js';
 import runGame from '../index.js';
 
-const userName = hello(); // здороваемся , узнаем имя пользователя
-const rules = 'What number is missing in the progression?'; // обьясняем правила
-
-// вычисляем прогрессию
+const rules = 'What number is missing in the progression?';
 
 const generateProgression = (start, step, hideNum) => {
   const progression = [];
-  for (let i = 0; i < 10; i += 1) {
+  const progressionLength = 10;
+  for (let i = 0; i < progressionLength; i += 1) {
     progression.push(start + step * i);
   }
   progression[hideNum] = '..';
@@ -25,10 +19,9 @@ const processGame = () => {
   const randomHiddenNumber = randomInt(1, 10);
   const finalTask = generateProgression(startProgrNumber, stepProgr, randomHiddenNumber);
   const correctAnswer = String(startProgrNumber + stepProgr * randomHiddenNumber);
-  console.log(`Question: ${finalTask}`); // задаем вопрос пользователю
-  return correctAnswer;
+  return [correctAnswer, finalTask];
 };
 
-const progres = () => runGame(processGame, userName, rules);
+const progres = () => runGame(processGame, rules);
 
 export default progres;

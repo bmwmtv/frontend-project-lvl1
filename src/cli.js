@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import readlineSync from 'readline-sync';
 
 const hello = () => {
