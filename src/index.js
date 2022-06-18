@@ -12,9 +12,7 @@ const runGame = (getData, rules) => {
   console.log(`Hello, ${userName}!`);
   console.log(rules);
   for (let round = 0; round < numberOfRounds; round += 1) {
-    const game = getData();
-    const correctAnswer = game[0];
-    const finalTask = game[1];
+    const [correctAnswer, finalTask] = getData();
     console.log(`Question: ${finalTask}`);
     const userResponse = getAnAnswer();
     if (correctAnswer !== userResponse) {

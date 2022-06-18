@@ -3,22 +3,23 @@ import runGame from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const generateProgression = (start, step, hideNum) => {
-  const progression = [];
-  const progressionLength = 10;
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(start + step * i);
+const getProgression = (start, step, length) => {
+  const result = [];
+  for (let i = 0; i < length; i += 1) {
+    result.push(start + step * i);
   }
-  progression[hideNum] = '..';
-  return progression.join(' ');
+  return result;
 };
 
 const processGame = () => {
-  const startProgrNumber = randomInt(1, 10);
-  const stepProgr = randomInt(2, 5);
-  const randomHiddenNumber = randomInt(1, 10);
-  const finalTask = generateProgression(startProgrNumber, stepProgr, randomHiddenNumber);
-  const correctAnswer = String(startProgrNumber + stepProgr * randomHiddenNumber);
+  const startProgression = randomInt(1, 10);
+  const stepProgression = randomInt(1, 5);
+  const lengthProgression = randomInt(5, 10);
+  const hiddenNumber = randomInt(0, lengthProgression - 1);
+  const progression = getProgression(startProgression, stepProgression, lengthProgression);
+  const correctAnswer = String(progression[hiddenNumber]);
+  progression[hiddenNumber] = '..';
+  const finalTask = progression.join(' ');
   return [correctAnswer, finalTask];
 };
 
