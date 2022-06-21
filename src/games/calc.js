@@ -1,5 +1,5 @@
 import randomInt from '../randIntCalc.js';
-import runGame from '../index.js';
+import game from '../index.js';
 
 const rules = 'What is the result of the expression?';
 
@@ -18,7 +18,7 @@ const calculation = (num1, num2, Func) => {
     case '-':
       return num1 - num2;
     default:
-      return 0;
+      return null;
   }
 };
 
@@ -31,6 +31,6 @@ const processGame = () => {
   return [correctAnswer, finalTask];
 };
 
-const calc = () => runGame(processGame, rules);
+const startGame = () => game(processGame, rules);
 
-export default calc;
+export default startGame;

@@ -1,5 +1,5 @@
 import randomInt from '../randIntCalc.js';
-import runGame from '../index.js';
+import game from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
@@ -23,6 +23,6 @@ const processGame = () => {
   return [correctAnswer, finalTask];
 };
 
-const progres = () => runGame(processGame, rules);
+const startGame = () => game(processGame, rules);
 
-export default progres;
+export default startGame;

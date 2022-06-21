@@ -1,5 +1,5 @@
 import randomInt from '../randIntCalc.js';
-import runGame from '../index.js';
+import game from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -25,6 +25,6 @@ const processGame = () => {
   return [correctAnswer, finalTask];
 };
 
-const prime = () => runGame(processGame, rules);
+const startGame = () => game(processGame, rules);
 
-export default prime;
+export default startGame;
